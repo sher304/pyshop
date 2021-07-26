@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <ol class="list-group list-group-numbered">
+        {%for i in categories%}
+        {% if i.products.all %}
+        <li class="list-group-item"><a href="{% url 'list' i.slug %}">{{ i.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+
+    </ol>
+{% endblock %}
+
