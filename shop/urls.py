@@ -24,6 +24,7 @@ from product.views import home_page, product_list, product_detail
 urlpatterns = [
 
     path('admin/', admin.site.urls),
+    path('account/', include('account.urls')),
     path('', include('product.urls')),
 
 ]
