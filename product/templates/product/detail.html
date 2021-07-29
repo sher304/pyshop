@@ -19,9 +19,10 @@
               {% else %}
                <p style="color: blue;" class="card-text">В ожидании</p>
               {% endif %}
+              {% if request.user.is_authenticated and request.user.is_superuser %}
               <a class="btn btn-primary" href="{% url 'update-product' product.id %}" role="button">Update</a>
               <a class="btn btn-danger" href="{% url 'delete-product' product.id %}" role="button">Delete</a>
-
+              {% endif %}
             </div>
           </div>
         </div>
