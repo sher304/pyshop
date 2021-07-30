@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 
 from django.conf import settings
 
-from product.views import home_page, product_list, product_detail
+# from product.views import home_page, product_list, product_detail
 
 urlpatterns = [
 
